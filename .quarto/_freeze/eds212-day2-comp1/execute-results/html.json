@@ -1,0 +1,16 @@
+{
+  "hash": "725fa001e3c9469411564fa5c20a135f",
+  "result": {
+    "markdown": "---\ntitle: \"eds212-day2-comp1\"\n---\n\n\n## Derivatives in R\n\nHere are my notes!\n\n\n::: {.cell}\n\n```{.r .cell-code}\nfx <- expression(3.1 * (x ^ 4) - 28 * x)\n\n# This is storing the derivative expression\ndf_dx <- D(fx, 'x')\n\n# This calls it back (show me!)\ndf_dx\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n3.1 * (4 * x^3) - 28\n```\n:::\n\n```{.r .cell-code}\nx <- 10\n\neval(df_dx) # Evaluates derivative\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 12372\n```\n:::\n:::\n\n\nYou try! Find the slope of g(z) = 2z^3^ - 10.5z^2^ + 4.1 at z = 3.6\n\n\n::: {.cell}\n\n```{.r .cell-code}\ngt = expression(2 * z ^ 3 - 10.5 * z ^ 2 + 4.1)\n\ndg_dt = D(gt, 'z')\n\nz = seq(from = 1, to = 3, length = 20)\n\neval(dg_dt)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n [1] -15.00000 -15.88089 -16.62881 -17.24377 -17.72576 -18.07479 -18.29086\n [8] -18.37396 -18.32410 -18.14127 -17.82548 -17.37673 -16.79501 -16.08033\n[15] -15.23269 -14.25208 -13.13850 -11.89197 -10.51247  -9.00000\n```\n:::\n:::\n",
+    "supporting": [
+      "eds212-day2-comp1_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
